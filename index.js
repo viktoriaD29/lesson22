@@ -28,9 +28,9 @@ spanElem.addEventListener('click', logGreenSpan);
 //для кнопк додаємо оброботчик собитий з функцією
 //в цій функції відміняється додавання цих слів в те поле
 //виходить, що ми кліку на кнопку спрацьовує функція яка відміняє обработчики собитій для блоків
-const buttonElem = document.querySelector('.remove-handlers-btn');
+const removeElem = document.querySelector('.remove-handlers-btn');
 
-function noLogTarget() {
+function removeHandle() {
   divElem.removeEventListener('click', logGreyDiv, true);
   divElem.removeEventListener('click', logGreenDiv);
 
@@ -41,4 +41,34 @@ function noLogTarget() {
   spanElem.removeEventListener('click', logGreenSpan);
 }
 
-buttonElem.addEventListener('click', noLogTarget);
+removeElem.addEventListener('click', removeHandle);
+
+/*const clearElem = document.querySelector('.clear-btn');
+
+function clearHandle() {
+  divElem.removeEventListener('click', logGreyDiv, true);
+  divElem.removeEventListener('click', logGreenDiv);
+
+  pElem.removeEventListener('click', logGreyP, true);
+  pElem.removeEventListener('click', logGreenP);
+
+  spanElem.removeEventListener('click', logGreySpan, true);
+  spanElem.removeEventListener('click', logGreenSpan);
+}
+
+clearElem.addEventListener('click', clearHandle);*/
+
+const attachElem = document.querySelector('.attach-handlers-btn');
+
+function attachHandle() {
+  divElem.addEventListener('click', logGreyDiv, true);
+  divElem.addEventListener('click', logGreenDiv);
+
+  pElem.addEventListener('click', logGreyP, true);
+  pElem.addEventListener('click', logGreenP);
+
+  spanElem.addEventListener('click', logGreySpan, true);
+  spanElem.addEventListener('click', logGreenSpan);
+}
+
+attachElem.addEventListener('click', attachHandle);
