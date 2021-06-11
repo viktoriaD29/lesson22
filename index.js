@@ -43,21 +43,6 @@ function removeHandle() {
 
 removeElem.addEventListener('click', removeHandle);
 
-/*const clearElem = document.querySelector('.clear-btn');
-
-function clearHandle() {
-  divElem.removeEventListener('click', logGreyDiv, true);
-  divElem.removeEventListener('click', logGreenDiv);
-
-  pElem.removeEventListener('click', logGreyP, true);
-  pElem.removeEventListener('click', logGreenP);
-
-  spanElem.removeEventListener('click', logGreySpan, true);
-  spanElem.removeEventListener('click', logGreenSpan);
-}
-
-clearElem.addEventListener('click', clearHandle);*/
-
 const attachElem = document.querySelector('.attach-handlers-btn');
 
 function attachHandle() {
@@ -72,3 +57,13 @@ function attachHandle() {
 }
 
 attachElem.addEventListener('click', attachHandle);
+
+const clearElem = document.querySelector('.clear-btn');
+
+function clearHandle() {
+  const eventsListElem = document.querySelector('.events-list');
+
+  eventsListElem.innerHTML += '';
+}
+
+clearElem.addEventListener('click', clearHandle);
