@@ -60,10 +60,8 @@ attachElem.addEventListener('click', attachHandle);
 
 const clearElem = document.querySelector('.clear-btn');
 
-function clearHandle() {
-  const eventsListElem = document.querySelector('.events-list');
+function clearList () {
+  eventsListElem.innerHTML = '';
+};
 
-  eventsListElem.innerHTML += '';
-}
-
-clearElem.addEventListener('click', clearHandle);
+clearElem.addEventListener('click', clearList);
