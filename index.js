@@ -61,6 +61,7 @@ attachElem.addEventListener('click', attachHandle);
 const clearElem = document.querySelector('.clear-btn');
 
 function clearList () {
+  const eventsListElem = document.querySelector('.events-list');
   eventsListElem.innerHTML = '';
 };
 
