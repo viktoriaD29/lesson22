@@ -31,14 +31,14 @@ spanElem.addEventListener('click', logGreenSpan);
 const buttonElem = document.querySelector('.remove-handlers-btn');
 
 function noLogTarget() {
-  divElem.addEventListener('click', logGreyDiv, true);
-  divElem.addEventListener('click', logGreenDiv);
+  divElem.removeEventListener('click', logGreyDiv, true);
+  divElem.removeEventListener('click', logGreenDiv);
 
-  pElem.addEventListener('click', logGreyP, true);
-  pElem.addEventListener('click', logGreenP);
+  pElem.removeEventListener('click', logGreyP, true);
+  pElem.removeEventListener('click', logGreenP);
 
-  spanElem.addEventListener('click', logGreySpan, true);
-  spanElem.addEventListener('click', logGreenSpan);
+  spanElem.removeEventListener('click', logGreySpan, true);
+  spanElem.removeEventListener('click', logGreenSpan);
 }
 
 buttonElem.addEventListener('click', noLogTarget);
